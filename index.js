@@ -22,3 +22,9 @@ const port = 8000;
 server.listen(port, () => {
   console.info(`Listening on ${port}`);
 });
+
+// ツールチップの有効化
+const tooltipTriggerElements = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+tooltipTriggerElements.forEach((tooltipTriggerElement) => {
+  new bootstrap.Tooltip(tooltipTriggerElement);
+});
